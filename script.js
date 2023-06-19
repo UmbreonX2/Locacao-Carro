@@ -1,8 +1,11 @@
-function toggleDropdown() {
-  var dropdownContent = document.getElementById("dropdownContent");
-  if (dropdownContent.style.display === "none") {
-    dropdownContent.style.display = "block";
-  } else {
-    dropdownContent.style.display = "none";
+const modal = document.querySelector('.modal-container')
+
+function openModal(edit = false, index = 0) {
+  modal.classList.add('active')
+
+  modal.onclick = e => {
+    if (e.target.className.indexOf('modal-container') !== -1) {
+      modal.classList.remove('active')
+    }
   }
 }
